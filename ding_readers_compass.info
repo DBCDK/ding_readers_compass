@@ -1,0 +1,6 @@
+name = Ding readers compass
+description = Add læsekompasset widget to DDBCMS site
+package = Ding!
+version = "7.x-0.26"
+core = 7.x
+
