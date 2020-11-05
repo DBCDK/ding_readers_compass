@@ -17,30 +17,11 @@ function ding_readers_compass_ctools_plugin_directory($module, $plugin) {
   }
 }
 
-function ding_readers_compass_menu() {
-  $items = array();
-
-  $items['læsekompasset'] = array(
-      'title' => 'Læsekompasset',
-      'page callback' => 'ding_readers_compass_render',
-      //'page arguments' => array(1, 2, 3),
-      'access arguments' => array('access content'),
-          //'type' => MENU_CALLBACK,
-  );
-
-  return $items;
-}
-
-function ding_readers_compass_render() {
-  $content = '
-  <div id="readers-compass-page"></div>  
-  <script src="https://api.laesekompas.dk/ddbWidget.js"></script>
-      <script>
-        EmbeddableWidget.mount({
-          type: "inspiration",
-          parentElement: "#readers-compass-page", // Dom Element in which the widget is mounted.
-          token: "5e03b34c9e105ce05751898141cd642eac7f894c" // Needs to be provided på DBC.
-        });
-      </script>';
-  return $content;
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function ding_readers_compass_feature_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
 }
