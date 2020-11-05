@@ -4,7 +4,7 @@ package = Ding!
 version = "7.x-0.26"
 core = 7.x
 
-dependencies[] = provider
+dependencies[] = ding_provider
 dependencies[] = features
 dependencies[] = ctools
 dependencies[] = page_manager

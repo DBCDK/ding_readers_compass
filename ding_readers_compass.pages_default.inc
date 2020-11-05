@@ -7,11 +7,11 @@
 /**
  * Implements hook_default_page_manager_pages().
  */
-function ding_readers_compass_feature_default_page_manager_pages() {
+function ding_readers_compass_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
-  $page->name = 'laesekompas';
+  $page->name = 'ding_readers_compass';
   $page->task = 'page';
   $page->admin_title = 'Readers compass';
   $page->admin_description = '';
@@ -59,7 +59,7 @@ function ding_readers_compass_feature_default_page_manager_pages() {
       'enabled' => 1,
       'metatags' => array(
         'title' => array(
-          'value' => 'Themes | [current-page:pager][site:name]',
+          'value' => 'Læsekompas | [current-page:pager][site:name]',
         ),
       ),
     ),
@@ -105,14 +105,7 @@ function ding_readers_compass_feature_default_page_manager_pages() {
     $pane->subtype = 'readers_compass_inspiration';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'markup' => 'h2',
-      'class' => '',
-      'id' => '',
-      'override_title' => 1,
-      'override_title_text' => 'Læsekompass',
-      'override_title_heading' => 'h2',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
