@@ -8,7 +8,7 @@
 /**
  * Implements hook_ctools_plugin_directory().
  *
- * It simply tells panels where to find the .inc files that define various
+ * Tells panels where to find the .inc files that define various
  * args, contexts, content_types.
  */
 function ding_readers_compass_ctools_plugin_directory($module, $plugin) {

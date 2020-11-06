@@ -6,8 +6,8 @@
 
 
 $plugin = array(
-  'title' => t('Ding readers compass inspiration'),
-  'description' => t("Add læsekompass inspiration widget"),
+  'title' => t('Ding readers compass inspiration', array(), array('context' => 'ding_readers_compass')),
+  'description' => t('Add readers compass inspiration widget', array(), array('context' => 'ding_readers_compass')),
   'single' => TRUE,
   'render callback' => 'ding_readers_compass_readers_compass_inspiration_content_type_render',
   'category' => t('Widgets'),
@@ -19,7 +19,6 @@ $plugin = array(
  */
 function ding_readers_compass_readers_compass_inspiration_content_type_render($subtype, $conf, $panel_args, $context) {
   $token = ding_provider_invoke('openplatform_token', 'for_agency');
-  $token = (!empty($token)) ? $token : '5e03b34c9e105ce05751898141cd642eac7f894c';
   // Build the content type block.
   $block = new stdClass();
   $block->content = '
@@ -29,7 +28,7 @@ function ding_readers_compass_readers_compass_inspiration_content_type_render($s
     EmbeddableWidget.mount({
       type: "inspiration",
       parentElement: "#readers-compass-inspiration", // Dom Element in which the widget is mounted.
-      token: "' . $token . '" // Needs to be provided på DBC.
+      token: "' . $token . '" // Provided by ding_provider.
     });
   </script>';
   return $block;

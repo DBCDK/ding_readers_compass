@@ -22,7 +22,7 @@ function ding_readers_compass_default_page_manager_pages() {
   );
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'Readers compass',
+    'title' => 'Læsekompas',
     'name' => 'main-menu',
     'weight' => '10',
     'parent' => array(
