@@ -1,6 +1,8 @@
 # ding_readers_compass
 Add Readers Compass widgets to DDBCMS site.
 
+Require Ding2 release 7.x-6.1.0 or newer.
+
 Installing this modules will add 2 widgets (a recommender and an inspiration widget),
 and a default page for the inspiration widget.
 
@@ -16,7 +18,7 @@ It can be customized by the administrator under /admin/structure/pages, and give
 a different menu position, title, path or disabled altogether.
 
 The recommender widget can be added to the ting_object page (also at /admin/structure/pages)
-under the content tab for that page. Add somewhere beneath the 'TingObject(Materialer)' and
+under the 'content' tab for that page. Add somewhere beneath the 'TingObject(Materialer)' and
 'Ting collection material types' content types.
 
 See also: https://api.laesekompas.dk/
