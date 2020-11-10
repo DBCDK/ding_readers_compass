@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * ding_readers_compass_feature.pages_default.inc
+ * ding_readers_compass.pages_default.inc
  */
 
 /**
@@ -40,13 +40,13 @@ function ding_readers_compass_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_laesekompas__panel_context_44b6a293-e400-4ae7-8ef1-f0a3e9ac6487';
+  $handler->name = 'page_ding_readers_compass__panel_context_60a35b45-f7c3-4b59-9552-66d013e0c592';
   $handler->task = 'page';
-  $handler->subtask = 'laesekompas';
+  $handler->subtask = 'ding_readers_compass';
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'title' => 'Læsekompas',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -55,25 +55,17 @@ function ding_readers_compass_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
-    'metatag_panels' => array(
-      'enabled' => 1,
-      'metatags' => array(
-        'title' => array(
-          'value' => 'Læsekompas | [current-page:pager][site:name]',
-        ),
-      ),
-    ),
     'name' => '',
   );
   $display = new panels_display();
-  $display->layout = 'ding2_site_template';
+  $display->layout = 'ding_layout_1';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
-      'left_sidebar' => NULL,
-      'main_content' => NULL,
-      'right_sidebar' => NULL,
+      'primary' => NULL,
+      'secondary' => NULL,
+      'tertiary' => NULL,
       'attachment_4_1' => NULL,
       'attachment_4_2' => NULL,
       'attachment_4_3' => NULL,
@@ -84,23 +76,16 @@ function ding_readers_compass_default_page_manager_pages() {
       'attachment_2_1' => NULL,
       'attachment_2_2' => NULL,
       'attachment_1_1' => NULL,
-      'top_banner' => NULL,
-      'branding' => NULL,
-      'header' => NULL,
-      'navigation' => NULL,
-      'content' => NULL,
-      'footer' => NULL,
-      'bottom' => NULL,
     ),
   );
   $display->cache = array();
   $display->title = '';
-  $display->uuid = '988af79c-a413-4a43-8c5d-a1b28aae2988';
+  $display->uuid = '47fafe95-aa51-4f84-9750-c8cf7bf9c46d';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-678f08d8-016e-4def-8941-c4bf4043a82a';
-    $pane->panel = 'content';
+    $pane->pid = 'new-3176bc6a-32af-43e7-8cfa-0d990cb045bc';
+    $pane->panel = 'primary';
     $pane->type = 'readers_compass_inspiration';
     $pane->subtype = 'readers_compass_inspiration';
     $pane->shown = TRUE;
@@ -114,14 +99,14 @@ function ding_readers_compass_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '678f08d8-016e-4def-8941-c4bf4043a82a';
-    $display->content['new-678f08d8-016e-4def-8941-c4bf4043a82a'] = $pane;
-    $display->panels['content'][0] = 'new-678f08d8-016e-4def-8941-c4bf4043a82a';
-  $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = '0';
+    $pane->uuid = '3176bc6a-32af-43e7-8cfa-0d990cb045bc';
+    $display->content['new-3176bc6a-32af-43e7-8cfa-0d990cb045bc'] = $pane;
+    $display->panels['primary'][0] = 'new-3176bc6a-32af-43e7-8cfa-0d990cb045bc';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-3176bc6a-32af-43e7-8cfa-0d990cb045bc';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
-  $pages['laesekompas'] = $page;
+  $pages['ding_readers_compass'] = $page;
 
   return $pages;
 

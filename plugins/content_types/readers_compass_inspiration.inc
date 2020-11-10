@@ -10,7 +10,7 @@ $plugin = array(
   'description' => t('Add readers compass inspiration widget', array(), array('context' => 'ding_readers_compass')),
   'single' => TRUE,
   'render callback' => 'ding_readers_compass_readers_compass_inspiration_content_type_render',
-  'category' => t('Widgets'),
+  'category' => t('DDB React'),
   'render last' => FALSE,
 );
 

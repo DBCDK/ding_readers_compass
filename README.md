@@ -3,9 +3,9 @@ Add Readers Compass widgets to DDBCMS site.
 
 Require Ding2 release 7.x-6.1.0 or newer.
 
-Installing this module will add 2 widgets (a recommender and an inspiration widget),
+Installing this module will add 2 DDB React widgets (a recommender and an inspiration widget),
 and a default page for the inspiration widget.
-
+1
 The recommender widget embeds a slider of recommendations based on a pid from the
 current url, and the inspiration widget is a full-page Readers Compass inspiration page.
 
