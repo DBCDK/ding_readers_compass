@@ -19,6 +19,7 @@ $plugin = array(
  */
 function ding_readers_compass_readers_compass_inspiration_content_type_render($subtype, $conf, $panel_args, $context) {
   $token = ding_provider_invoke('openplatform_token', 'for_agency');
+  $agency = variable_get('ting_agency', '');
   // Build the content type block.
   $block = new stdClass();
   $block->content = '
@@ -28,6 +29,7 @@ function ding_readers_compass_readers_compass_inspiration_content_type_render($s
     EmbeddableWidget.mount({
       type: "inspiration",
       parentElement: "#readers-compass-inspiration", // Dom Element in which the widget is mounted.
+      agency: "' . $agency . '", // ID of Library that collection inspiration are based on.
       token: "' . $token . '" // Provided by ding_provider.
     });
   </script>';
