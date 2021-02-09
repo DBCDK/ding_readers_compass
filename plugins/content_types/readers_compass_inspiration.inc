@@ -30,7 +30,8 @@ function ding_readers_compass_readers_compass_inspiration_content_type_render($s
       type: "inspiration",
       parentElement: "#readers-compass-inspiration", // Dom Element in which the widget is mounted.
       agency: "' . $agency . '", // ID of Library that collection inspiration are based on.
-      token: "' . $token . '" // Provided by ding_provider.
+      token: "' . $token . '", // Provided by ding_provider.
+      basepath: "' . base_path() . 'ting/object/"
     });
   </script>';
   return $block;
